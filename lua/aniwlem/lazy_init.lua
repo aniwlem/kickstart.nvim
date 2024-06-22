@@ -8,5 +8,7 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup {
-  spec = 'aniwlem.lazy',
+  { import = 'aniwlem/lazy' },
+  { import = 'aniwlem/lazy/lsp' },
+  -- spec = 'aniwlem.lazy',
 }
