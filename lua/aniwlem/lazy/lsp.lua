@@ -33,8 +33,8 @@ return {
         basedpyright = {
           settings = {
             basedpyright = {
-              disableOrganizeImports = false,
-              disableTaggedHints = true,
+              disableOrganizeImports = true,
+              disableTaggedHints = false,
               analysis = {
                 typeCheckingMode = 'standard',
                 useLibraryCodeForTypes = true, -- Analyze library code for type information
@@ -49,21 +49,6 @@ return {
               },
             },
           },
-          -- settings = {
-          --   pyright = {
-          --     disableOrganizeImports = true,
-          --     disableTaggedHints = true,
-          --   },
-          --   python = {
-          --     analysis = {
-          --       diagnosticSeverityOverrides = {
-          --         ignore = { '*' },
-          --         typeCheckingMode = 'off',
-          --         reportUndefinedVariable = 'none',
-          --       },
-          --     },
-          --   },
-          -- },
         },
 
         ruff = {
