@@ -58,6 +58,10 @@ return {
             },
           },
         },
+
+        julials = {},
+        -- use haskellTools instead, less setup to make it work
+        -- hls = {},
       }
 
       require('mason').setup()

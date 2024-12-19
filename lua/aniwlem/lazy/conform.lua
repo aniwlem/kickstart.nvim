@@ -28,6 +28,10 @@ return {
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
         python = { 'autopep8', 'ruff' },
+        c = { 'clangd' },
+        hs = { 'hls' },
+        tex = { 'texlab', 'ltex' },
+        julia = { 'julials' },
       },
     },
   },
