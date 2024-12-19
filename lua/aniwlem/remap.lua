@@ -3,7 +3,7 @@ vim.g.maplocalleader = ' '
 
 -- NOTE: All binds taken from theprimeagen
 --
--- Move selection
+-- Movl selection
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv'")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv'")
 vim.keymap.set('n', 'J', 'mzJ`z')
@@ -35,6 +35,18 @@ vim.keymap.set('n', '<M-.>', '<c-w>5>')
 vim.keymap.set('n', '<M-t>', '<c-w>+')
 vim.keymap.set('n', '<M-s>', '<c-w>-')
 
+-- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
+-- or just use <C-\><C-n> to exit terminal mode
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+
+-- -- Keybinds to make split navigation easier.
+-- --  Use CTRL+<hjkl> to switch between windows
+-- --
+-- See `:help wincmd` for a list of all window commands
+vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 -- replace all matches of current selection
 -- local function get_visual_selection()
 --   local _, ls_row, ls_col, _ = unpack(vim.fn.getpos "'<")
