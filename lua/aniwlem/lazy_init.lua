@@ -10,5 +10,4 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup {
   { import = 'aniwlem/lazy' },
   { import = 'aniwlem/lazy/lsp' },
-  -- spec = 'aniwlem.lazy',
 }
