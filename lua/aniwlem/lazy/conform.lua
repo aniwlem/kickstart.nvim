@@ -29,6 +29,7 @@ return {
         -- Conform can also run multiple formatters sequentially
         python = { 'autopep8', 'ruff' },
         c = { 'clangd' },
+        cpp = { 'clangd' },
         hs = { 'hls' },
         tex = { 'texlab', 'ltex' },
         julia = { 'julials' },
