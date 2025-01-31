@@ -1,12 +1,14 @@
 return {
   'lervag/vimtex',
   lazy = false, -- we don't want to lazy load VimTeX
-  -- tag = "v2.15", -- uncomment to pin to a specific release
   init = function()
     -- VimTeX configuration goes here, e.g.
     vim.g.vimtex_view_method = 'general'
-    vim.g.vimtex_view_general_viewer = 'sumatraPDF'
-    -- vim.g.vimtex_view_general_options = '-reuse-instance @pdf'
-    -- vim.g.vimtex_view_general_options_latexmk = '-reuse-instance'
+
+    -- Use the full path for SumatraPDF
+    vim.g.vimtex_view_general_viewer = 'sumatraPDF.exe'
+
+    vim.g.vimtex_view_general_options = '-inverse-search "wslpath -w @tex"'
+    vim.g.vimtex_view_general_options = vim.g.vimtex_view_general_options .. ' -forward-search "@tex @line @pdf'
   end,
 }
