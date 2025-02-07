@@ -29,6 +29,7 @@ vim.keymap.set('n', '<leader>Y', '"+Y')
 -- replace current word
 vim.keymap.set('n', '<leader>rc', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- From tjdevries
 -- change split sizes
 vim.keymap.set('n', '<M-,>', '<c-w>5<')
 vim.keymap.set('n', '<M-.>', '<c-w>5>')

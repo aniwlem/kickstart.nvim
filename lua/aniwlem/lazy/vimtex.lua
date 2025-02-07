@@ -5,10 +5,7 @@ return {
     -- VimTeX configuration goes here, e.g.
     vim.g.vimtex_view_method = 'general'
 
-    -- Use the full path for SumatraPDF
-    vim.g.vimtex_view_general_viewer = 'sumatraPDF.exe'
-
-    vim.g.vimtex_view_general_options = '-inverse-search "wslpath -w @tex"'
-    vim.g.vimtex_view_general_options = vim.g.vimtex_view_general_options .. ' -forward-search "@tex @line @pdf'
+    vim.g.vimtex_view_general_viewer = vim.fn.expand '~/.local/bin/open-sumatra.sh'
+    vim.g.vimtex_view_general_options = '-reuse-instance -forward-search @tex @line @pdf'
   end,
 }
